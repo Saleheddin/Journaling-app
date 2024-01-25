@@ -8,59 +8,104 @@
   --bs-navbar-color: white !important;
   --bs-navbar-brand-color: white !important;
   font-weight: bolder;
-  
+
   background: linear-gradient(to top, #a6f77b, #2dbd6e) !important;
 }
 
-nav.container-fluid{
-    display: flex !important;
-    justify-content: space-between !important;
-    background-color: black;
+nav.container-fluid {
+  display: flex !important;
+  justify-content: space-between !important;
+  background-color: black;
 }
 
-.navbar-collapse{
-    flex-grow: 0 !important;
+.navbar-collapse {
+  flex-grow: 0 !important;
 }
 
-.navbar-nav>*{
-    margin-left: 40px !important;
+.navbar-nav > * {
+  margin-left: 40px !important;
 }
-.navbar-collapse>*{
-    margin-left: 40px !important;
+.navbar-collapse > * {
+  margin-left: 40px !important;
 }
 
 #login-btn {
-    background: white;
-    border: none;
-    border-right: #117c2d !important;
-    border-radius: 21px ;
-    cursor: pointer;
-    color: #2dbd6e;
-    font-family: "Raleway SemiBold", sans-serif;
-    height: 42.3px;
-    transition: 0.25s;
-    width: 153px;
-    letter-spacing: 4px;
-  }
+  background: white;
+  border: none;
+  border-right: #117c2d !important;
+  border-radius: 21px;
+  cursor: pointer;
+  color: #2dbd6e;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  transition: 0.25s;
+  width: 153px;
+  letter-spacing: 4px;
+}
 
-  #login-btn:hover {
-    box-shadow: 0px 1px 18px #117c2d;
-  }
+#login-btn:hover {
+  box-shadow: 0px 1px 18px #117c2d;
+}
 
-  #signup-btn {
-    background: white;
-    border: none;
-    border-left: #117c2d !important;
-    border-radius:  0 21px 21px 0 ;
-    cursor: pointer;
-    color: #2dbd6e;
-    font-family: "Raleway SemiBold", sans-serif;
-    height: 42.3px;
-    transition: 0.25s;
-    width: 153px;
-    letter-spacing: 4px;
-  }
+#signup-btn {
+  background: white;
+  border: none;
+  border-left: #117c2d !important;
+  border-radius: 0 21px 21px 0;
+  cursor: pointer;
+  color: #2dbd6e;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  transition: 0.25s;
+  width: 153px;
+  letter-spacing: 4px;
+}
 
-  #signup-btn:hover {
-    box-shadow: 0px 1px 18px #117c2d;
-  }
+#signup-btn:hover {
+  box-shadow: 0px 1px 18px #117c2d;
+}
+
+#link{
+    display: inline-block;
+    margin: 20px 30px;
+    color: white;
+    cursor:pointer;
+    color: white ;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+ /* #link:hover{
+    background: linear-gradient(
+        to bottom,
+        transparent 60%,
+        #ffee02a7 10%);
+    transition: all 2s;
+} */
+
+.navbar-collapse li {
+    position: relative;
+}
+
+.navbar-collapse li:hover:after,
+.navbar-collapse li.active:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar-collapse li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 18px;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-out;
+}
+.active{
+    color: white;
+}

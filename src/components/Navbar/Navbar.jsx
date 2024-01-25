@@ -1,7 +1,16 @@
 import React from "react";
 import "./Navbar.css";
+import { Link, useNavigate } from "react-router-dom";
+import { isLoginPage } from "../../utils/utils";
 
 function Navbar() {
+
+  const navigate = useNavigate();
+
+  // Don't render the navbar on the login page
+  if (isLoginPage(location.pathname)) {
+    return null;
+  }
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
@@ -21,29 +30,18 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                Home
-              </a>
+            <li className="nav-item active">
+              <Link id="link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Features
-              </a>
+              <Link id="link" to="/">Features</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/">
-                Features
-              </a>
+              <Link id="link" to="/">Features</Link>
             </li>
           </ul>
           <div className="cta">
-            <button id="login-btn">Login</button>
+            <button id="login-btn" onClick={() => navigate("/login")}>Login</button>
             {/* <button id="signup-btn">Signup</button> */}
           </div>
         </div>

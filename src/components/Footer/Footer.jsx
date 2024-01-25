@@ -1,6 +1,12 @@
 import React from 'react'
+import { isLoginPage } from '../../utils/utils';
 
 const Footer = () => {
+
+  // Don't render the navbar on the login page
+  if (isLoginPage(location.pathname)) {
+    return null;
+  }
   return (
     <footer className="text-white text-center py-4">
       <div className="container">

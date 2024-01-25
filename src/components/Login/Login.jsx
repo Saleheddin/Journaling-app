@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import "./Login.css";
 
-function Login({hideNavbar}){
-  //this will be called when the login component is rendered
-  useEffect(() => {
-    hideNavbar();
-  }, []);
+function Login(){
+
 
   return (
     <div className="login">

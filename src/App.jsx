@@ -10,22 +10,16 @@ import CursorShadow from './components/CursorShadow/CursorShadow';
 
 function App() {
 
-  const [showNavbar,setShowNavbar] = useState(true);
-
-  const hideNavbar = () =>{
-    setShowNavbar(false); 
-  }
-
   return (
     <>
       
-      {showNavbar && <Navbar />}
+      <Navbar />
       <CursorShadow />
       <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/login" element={<Login hideNavbar={hideNavbar}/>} />
+          <Route path="/login" element={<Login/>} />
        </Routes>
-       {showNavbar && <Footer/>}
+      <Footer/>
     </>
   )
 }

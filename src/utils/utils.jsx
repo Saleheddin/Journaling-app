@@ -1,0 +1,1 @@
+export const isLoginPage = (pathname) => pathname === '/login';
