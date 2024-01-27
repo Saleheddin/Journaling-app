@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import CursorShadow from './components/CursorShadow/CursorShadow';
+import WorkSpace from './components/Journaling/WorkSpace';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/workspace" element={<WorkSpace/>} />
        </Routes>
       <Footer/>
     </>

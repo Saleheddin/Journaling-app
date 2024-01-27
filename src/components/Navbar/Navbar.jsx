@@ -1,14 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import { isLoginPage } from "../../utils/utils";
+import { isLoginPage, isWorkSpace } from "../../utils/utils";
 
 function Navbar() {
 
   const navigate = useNavigate();
 
   // Don't render the navbar on the login page
-  if (isLoginPage(location.pathname)) {
+  if (isLoginPage(location.pathname) || isWorkSpace(location.pathname)) {
     return null;
   }
   return (

@@ -1,0 +1,143 @@
+/* Journal.css */
+
+.journal-container {
+  display: flex;
+  max-width: 100%;
+  font-family: "Raleway Thin", sans-serif;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #f2f2f2;
+  padding: 5px;
+  height: 100vh;
+  overflow-x: scroll;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+.header p {
+  margin: 0;
+}
+.header > div {
+  margin-left: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #dcdcdc;
+}
+
+.sidebar .active {
+  background-color: #4ECD72;
+  color: #fff;
+}
+
+.journal-content {
+  width: 100%;
+  padding: 20px;
+}
+
+.journal-entry-form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.journal-entry-form h2 {
+  margin-bottom: 20px;
+}
+
+.journal-entry-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.journal-entry-form input,
+.journal-entry-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.journal-entry-form button {
+  background-color: #4ECD72;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.journal-entry-form button:hover {
+  background-color: #2980b9;
+}
+
+/* journal notes */
+.journal-notes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons>*{
+  margin-inline: 5px;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
+.add{
+  background-color: #54de7c;
+}
+.cancel{
+  background-color: rgb(232, 9, 9);
+}
+.notes{
+  border: #4ECD72;
+  margin: 20px 10px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(193, 192, 192);
+  box-shadow: 5px 5px 2px 2px #4ECD72;
+}
+.editbuttons{
+  display: none;
+  margin-left: auto;
+}
+.editbuttons>*{
+  margin-inline: 5px;
+  width: 30px;height: 30px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.6;
+}
+.editbuttons>*:hover{
+  opacity: 0.9;
+}
+.editbuttons.hover{
+  display: block;
+}
+.header-notes{
+  display: flex;
+  flex-direction: row;
+}
